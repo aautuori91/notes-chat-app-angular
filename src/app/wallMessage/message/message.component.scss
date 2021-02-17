@@ -1,0 +1,280 @@
+.myMessage {
+	float: right;
+}
+/* CSS talk bubble */
+.talk-bubble {
+	margin:10px 20px 35px 10px;
+  display: inline-block;
+  position: relative;
+	height: auto;
+	background-color: #eff2f7;
+}
+.talk-bubble-right {
+	margin:10px 20px 35px 0px;
+	display: inline-block;
+  position: relative;
+	height: auto;
+	background-color: #eff2f7;
+}
+.border{
+  border: 8px solid #666;
+}
+.round{
+  border-radius: 30px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+
+}
+
+/* Right triangle placed top left flush. */
+.tri-right.border.left-top:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: -40px;
+	right: auto;
+  top: -8px;
+	bottom: auto;
+	border: 32px solid;
+	border-color: #666 transparent transparent transparent;
+}
+.tri-right.left-top:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: -10px;
+	right: auto;
+  top: 0px;
+	bottom: auto;
+	border: 25px solid;
+	border-color: #eff2f7 transparent transparent transparent;
+}
+
+/* Right triangle, left side slightly down */
+.tri-right.border.left-in:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: -40px;
+	right: auto;
+  top: 30px;
+	bottom: auto;
+	border: 20px solid;
+	border-color: #666 #666 transparent transparent;
+}
+.tri-right.left-in:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: -20px;
+	right: auto;
+  top: 38px;
+	bottom: auto;
+	border: 12px solid;
+	border-color:#eff2f7 #eff2f7 transparent transparent;
+}
+
+/*Right triangle, placed bottom left side slightly in*/
+.tri-right.border.btm-left:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: -8px;
+  right: auto;
+  top: auto;
+	bottom: -40px;
+	border: 32px solid;
+	border-color: transparent transparent transparent #666;
+}
+.tri-right.btm-left:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 0px;
+  right: auto;
+  top: auto;
+	bottom: -20px;
+	border: 22px solid;
+	border-color: transparent transparent transparent #eff2f7;
+}
+
+/*Right triangle, placed bottom left side slightly in*/
+
+.tri-right.btm-left-in:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 38px;
+  right: auto;
+  top: auto;
+	bottom: -20px;
+	border: 12px solid;
+	border-color: #eff2f7 transparent transparent #eff2f7;
+}
+
+/*Right triangle, placed bottom right side slightly in*/
+.tri-right.border.btm-right-in:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: auto;
+	right: 30px;
+	bottom: -40px;
+	border: 20px solid;
+	border-color: #666 #666 transparent transparent;
+}
+.tri-right.btm-right-in:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: auto;
+	right: 38px;
+	bottom: -20px;
+	border: 12px solid;
+	border-color: #eff2f7 #eff2f7 transparent transparent;
+}
+
+.tri-right.btm-right:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: auto;
+	right: 0px;
+	bottom: -20px;
+	border: 12px solid;
+	border-color: #eff2f7 #eff2f7 transparent transparent;
+}
+
+/* Right triangle, right side slightly down*/
+.tri-right.right-in:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: auto;
+	right: -20px;
+  top: 38px;
+	bottom: auto;
+	border: 12px solid;
+	border-color: #eff2f7 transparent transparent #eff2f7;
+}
+
+/* Fumetto con triangolo in alto a dx, per messaggi propri */
+.tri-right.right-top:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: auto;
+	right: -10px;
+  top: 0px;
+	bottom: auto;
+	border: 25px solid;
+	border-color: #eff2f7 transparent transparent transparent;
+}
+
+/* fumetto Messaggio */
+.talktext{
+  padding: 1.5em 2em;
+  text-align: left;
+  line-height: 1.5em;
+  color:black;
+  font-weight: 500;
+  font-size: 13px;
+}
+.talktext p{
+  /* remove webkit p margins */
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}
+img.avatarMessage {
+    width: 75%;
+    margin-left: 10px;
+	border-radius: 30px;
+}
+.hourMessageToLeft{
+	text-align:right;
+	color:#8e9bad;
+	font-size: 13px;
+	padding-right: 0px;
+}
+.userNameMessage{
+	color:#191f24;
+	font-weight: 700;
+	font-size: 13px;
+	text-align: left;
+}
+
+.talktext {
+	label{
+		color: #d3135a;
+	}
+	input {
+		opacity: 0;
+		position: absolute;
+		pointer-events: none;
+	  }
+	  
+	  p {
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;  
+		overflow: hidden;
+	  }
+	  
+	  input:focus ~ label {
+		outline: -webkit-focus-ring-color auto 5px;
+	  }
+	  
+	  input:checked + p {
+		-webkit-line-clamp: unset;
+	  }
+	  
+	  input:checked ~ label,
+	  p:not(.truncated) ~ label{
+		display: none;
+		}
+		
+	  
+	}
+	@media screen and (max-width: 375px) {
+		img.avatarMessage {
+			width: 25px !important;
+			margin-left: 0px !important;
+		}
+		.talktext {
+			padding: 10px;
+		}
+		.hourMessageToLeft{
+			font-size:10px;
+		}
+		.userNameMessage{
+			font-size:10px;
+		}
+	  }
+
+	  @media screen and (min-width: 400px) and (max-width: 775px) {
+		img.avatarMessage {
+			width: 35px !important;
+			margin-left: 0px !important;
+		}
+		.talktext {
+			padding: 10px;
+		}
+		.hourMessageToLeft{
+			font-size:10px;
+		}
+		.userNameMessage{
+			font-size:10px;
+		}
+	  }

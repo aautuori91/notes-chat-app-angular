@@ -1,0 +1,9 @@
+<div class="boxCompose">
+  <div class="composeMessage">
+    <textArea placeholder="{{placeholdersubmit}}" type="text" [(ngModel)]="this.textMessage" class="form-control" row="3" ngDefaultControl>
+</textArea>
+  </div>
+  <div class="buttonPublish">
+    <button (click)="addMessage()" class="submitButtonMessage btn btn-primary">{{publishButton}}</button>
+  </div>
+</div>

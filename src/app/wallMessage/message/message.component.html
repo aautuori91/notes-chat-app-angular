@@ -1,0 +1,45 @@
+<div class="row" *ngIf="getCurrentUserID() != message.idUser">
+  <div class="col-1">
+    <img class="avatarMessage" [src]="getUserByID(message.idUser).avatarIMG" />
+  </div>
+  <div class="col-8">
+    <div class="row">
+      <div class="col-6 userNameMessage">
+        {{getUserByID(message.idUser).name}}
+      </div>
+      <div class="col-6 hourMessageToLeft">
+        {{message.dataMessage | date: "dd/MM/yyyy HH:mm"}}
+      </div>
+    </div>
+    <div class="col-12 talk-bubble tri-right left-top">
+      <div class="talktext">
+        <input type="checkbox" id="expanded{{message.id}}" />
+        <p>{{message.textMessage}}</p>
+        <label for="expanded{{message.id}}" role="button">{{readmore}}</label>
+      </div>
+    </div>
+  </div>
+  <div class="col-3"></div>
+</div>
+
+<div class="row" *ngIf="getCurrentUserID() === message.idUser">
+  <div class="col-2 col-sm-3"></div>
+  <div class="col-8">
+    <div class="row">
+      <div class="col-6 userNameMessage">You</div>
+      <div class="col-6 hourMessageToLeft">
+        {{message.dataMessage | date: "dd/MM/yyyy HH:mm"}}
+      </div>
+    </div>
+    <div class="col-12 talk-bubble-right tri-right right-top">
+      <div class="talktext">
+        <input type="checkbox" id="expanded{{message.id}}" />
+        <p>{{message.textMessage}}</p>
+        <label for="expanded{{message.id}}" role="button">{{readmore}}</label>
+      </div>
+    </div>
+  </div>
+  <div class="col-2 col-sm-1">
+    <img class="avatarMessage" [src]="getUserByID(message.idUser).avatarIMG" />
+  </div>
+</div>

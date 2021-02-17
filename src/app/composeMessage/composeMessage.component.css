@@ -1,0 +1,16 @@
+textarea {
+    resize: none;
+  }
+.submitButtonMessage{
+    background:#d3135a;
+    color:#fff;
+    border: #d3135a;
+}
+.buttonPublish{
+    padding-top:10px;
+    text-align: right;
+}
+.boxCompose{
+    background:#eff2f7;
+    padding: 15px 25px;
+}

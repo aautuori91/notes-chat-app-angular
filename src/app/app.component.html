@@ -1,0 +1,9 @@
+<div class="container">
+  <div style="padding: 0px !important;" class="row shadow p-3 mb-5 bg-white rounded">
+    <div class="col-12" class="allMessages" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+      <app-wallMessage></app-wallMessage>
+    </div>
+    <app-composeMessage style="padding: 0px !important;"></app-composeMessage>
+  </div>
+</div>
+<router-outlet></router-outlet>
