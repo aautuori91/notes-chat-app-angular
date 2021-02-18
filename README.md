@@ -8,7 +8,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Live DEMO
 
-SENDBOX >> https://y5sqe.csb.app/
+SANDBOX >> https://y5sqe.csb.app/
 
 ![alt text](<./screenshot.png>) 
 
